@@ -209,6 +209,7 @@ button {
 
     .perks {
         width: 100%;
+        position: relative;
     }
 
     .perks-wrap {
@@ -221,6 +222,7 @@ button {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        z-index: 20;
     }
 
     .perks-item {
