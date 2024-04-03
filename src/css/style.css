@@ -65,8 +65,10 @@ button {
     }
 
     .contact-wrap {
+        width: 210px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .contact-btn {
@@ -74,6 +76,27 @@ button {
         height: 40px;
         font-size: 15px;
         border-radius: 10px;
+        -webkit-animation: pulse 5s infinite;
+        animation: pulse 5s infinite;
+        background: #fcf000;
+    }
+
+    @keyframes pulse {
+    0% {
+    box-shadow: 0 0 0 0 #b4ab008d;
+    }
+
+    70% {
+    box-shadow: 0 0 0 0 #b4ab008d;
+    }
+
+    80% {
+        box-shadow: 0 0 0 5px #b4ab008d;
+        }
+
+    100% {
+    box-shadow: 0 0 0 0 #b4ab008d;
+    }
     }
 
     .phone-btn {
@@ -167,8 +190,11 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    /* background: linear-gradient(90deg, #8c5702ad, #8c5702ad, #00000000); */
     background: linear-gradient(90deg, #ffffffaa, #ffffffaa, #ffffffaa, #00000000);
+}
+
+.shadow-2 {
+    background:#ffffffbd;
 }
 
 .box p {
@@ -185,18 +211,6 @@ button {
 
 .switch input:nth-child(3):checked ~ .wrapper {
     left: -200vw;
-}
-
-.slide-1 {
-    background: url(../img/2.jpg) center center/cover no-repeat;
-}
-
-.slide-2 {
-    background: url(../img/main.jpeg) center center/cover no-repeat;
-}
-
-.slide-3 {
-    background: url(../img/3.jpg) center center/cover no-repeat;
 }
 
 .box {
@@ -257,6 +271,11 @@ button {
     }
 
     .perks-description h2,
+    .perks-description h3 {
+        letter-spacing: 3px;
+    }
+
+    .perks-description h2,
     .perks-description h3,
     .perks-description p,
     .perks-description ul {
@@ -272,9 +291,24 @@ button {
     background: #f5f5f5;
 }
 
+.popular h3 {
+    width: 400px;
+    line-height: 40px;
+}
+
+.popular h2 {
+    letter-spacing: 3px;
+}
+
+.popular h2, .popular h3 {
+    padding: 10px 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .popular-wrap {
     width: calc(100% - 50px);
-    padding: 20px 0;
+    padding: 0 0 20px 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -316,3 +350,121 @@ button {
     }
 
 /* STAGE */
+
+/* GALLERY */
+
+    .gallery {
+        width: 100%;
+        height: 500px;
+        position: relative;
+    }
+
+    .gallery-container {
+        margin: 20px auto;
+        height: 300px;
+    }
+
+    .link-style {
+        background: #fcf000; 
+        padding: 10px; 
+        border-radius: 10px;
+    }
+
+    .gallery h2 {
+        letter-spacing: 3px;
+    }
+
+    .gallery h2, .gallery h3 {
+        text-align: left;
+        padding: 10px 0 10px 25px;
+    }
+
+    .gallery-controls {
+        margin: -80px 0 0 0;
+    }
+
+    .gallery-box {
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .box-item {
+        width: 30%;
+        text-align: left;
+    }
+
+    .box-item h3{
+        padding: 10px 0;
+    }
+
+    .box-item-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .gallery-box h3 {
+        text-align: left;
+    }
+
+    .gallery-box img {
+        width: 90%;
+    }
+
+/* GALLERY */
+
+/* CONTACT */
+
+    .contact {
+        width: 100%;
+        height: 500px;
+        display: flex;
+    }
+
+    .contact-item-wrap {
+        width: 50%;
+        height: 100%;
+    }
+
+    .contact-item-list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 0px 15px 25px;
+        background: #f5f5f5;
+    }
+
+    .contact-item h3 {
+        text-align: left;
+    }
+
+    .contact-phone {
+        cursor: pointer;
+    }
+
+    .contact-phone:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .phone-margin {
+        margin-left: 25px;
+    }
+
+    .contact-item img{
+        width: 50px;
+        height: 50px;
+        margin: 0 25px 0 0;
+    }
+
+    .map-wrap {
+        width: 50%;
+        height: 100%;
+    }
+/* CONTACT */
