@@ -45,10 +45,10 @@ window.addEventListener("DOMContentLoaded", function() {
     document.getElementById('contactForm').addEventListener('submit', function(e){
         e.preventDefault()
 
-        let message = `</b>ЗАЯВКА С САЙТА</b>\n`;
-        message += `</b>ИМЯ:</b> ${ this.name.value }\n`;
-        message += `</b>ПЛОЩАДЬ:</b> ${ this.metr.value }\n`;
-        message += `</b>ТЕЛЕФОН:</b> ${ this.phone.value }`;
+        let message = `<b>ЗАЯВКА С САЙТА</b>\n`;
+        message += `<b>ИМЯ:</b> ${ this.name.value }\n`;
+        message += `<b>ПЛОЩАДЬ:</b> ${ this.metr.value }\n`;
+        message += `<b>ТЕЛЕФОН:</b> ${ this.phone.value }`;
 
         axios.post(URI_API, {
             chat_id: CHAT_ID,
@@ -56,7 +56,7 @@ window.addEventListener("DOMContentLoaded", function() {
             text: message
         })
 
-        .then((res) => {
+        .then(() => {
             this.name.value = ''
             this.metr.value = ''
             this.phone.value = ''
@@ -72,3 +72,5 @@ window.addEventListener("DOMContentLoaded", function() {
     })
 
 })
+
+
