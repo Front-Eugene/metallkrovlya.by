@@ -59,9 +59,14 @@ button {
         font-size: 20px;
     }
 
+    .nav-item {
+        padding: 10px;
+    }
+
     .nav-item:hover {
-        padding: 0 0 10px 0;
-        border-bottom: 2px solid #000;
+        border-radius: 10px;
+        background: #7d7d7d;
+        color: #fff;
     }
 
     .contact-wrap {
@@ -162,6 +167,18 @@ button {
     width: 50px;
 }
 
+.switch input:nth-child(1):checked ~ .wrapper {
+    left: 0;
+}
+
+.switch input:nth-child(2):checked ~ .wrapper {
+    left: -100vw;
+}
+
+.switch input:nth-child(3):checked ~ .wrapper {
+    left: -200vw;
+}
+
 .wrapper {
     position: relative;
     width: 300vw;
@@ -199,18 +216,6 @@ button {
 
 .box p {
     width: 80%;
-}
-
-.switch input:nth-child(1):checked ~ .wrapper {
-    left: 0;
-}
-
-.switch input:nth-child(2):checked ~ .wrapper {
-    left: -100vw;
-}
-
-.switch input:nth-child(3):checked ~ .wrapper {
-    left: -200vw;
 }
 
 .box {
@@ -292,7 +297,6 @@ button {
 }
 
 .popular h3 {
-    width: 400px;
     line-height: 40px;
 }
 
@@ -327,10 +331,10 @@ button {
 
 .popular-item span {
     display: block;
-    width: 100px;
-    height: 3px;
+    width: 100%;
+    height: 1px;
     margin: 5px 0;
-    border: 2px solid #000;
+    border: 1px solid #000;
 }
 
 .popular-img {
@@ -340,6 +344,17 @@ button {
 }
 
 /* POPULAR */
+
+/* CATALOG */
+
+    .catalog {
+        width: 100%;
+        height: 500px;
+        background: #8f8f8f;
+    }
+
+/* CATALOG */
+
 
 /* STAGE */
     
@@ -413,6 +428,65 @@ button {
 
 /* GALLERY */
 
+/* FORM */
+
+    .form {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    form {
+        align-items: center;
+        z-index: 100;
+        margin: 0 auto;
+    }
+    
+    .form-item-wrap {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 850px;
+        margin: 40px 0;
+    }
+
+    form h2 {
+        font-size: 40px;
+    }
+
+    form p {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+    
+
+    input {
+        /* width: 270px; */
+        height: 50px;
+        border: 2px solid #000;
+        background: #00000030;
+        border-radius: 10px;
+        /* padding: 0 0 0 10px; */
+        padding: 10px;
+        font-size: 20px;
+    }
+
+
+    input::placeholder {
+        color: #303030;
+    }
+
+    .form-btn {
+        width: 300px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+/* FORM */
+
 /* CONTACT */
 
     .contact {
@@ -468,3 +542,17 @@ button {
         height: 100%;
     }
 /* CONTACT */
+
+
+/* FOOTER */
+
+    footer {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #7d7d7d;
+    }
+
+/* FOOTER */
