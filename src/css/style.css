@@ -193,12 +193,16 @@ button {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 .box-text {
     z-index: 100;
+}
+
+.box-text h2 {
+    font-size: 40px;
 }
 
 .shadow {
@@ -215,7 +219,9 @@ button {
 }
 
 .box p {
-    width: 80%;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .box {
@@ -383,6 +389,16 @@ button {
         margin: 10px auto 20px auto;
     }
 
+    .close-card {
+        display: none;
+    }
+
+    .more .close-card {
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
     .more {
         border: 1px solid #000;
         position: absolute;
@@ -390,12 +406,12 @@ button {
         flex-direction: row;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
+        width: 60%;
         height: 500px;
         background: #8f8f8f;
         z-index: 100;
     }
-
+    
     .more .card-mini {
         width: 300px;
     }
@@ -480,13 +496,6 @@ button {
         display: flex;
     }
 
-    .card-text {
-        position: absolute;
-        right: 20px;
-        margin: 50px 0 0 0;
-        width: 400px;
-    }
-
     .description ul{
         margin: 10px 0 10px 150px;
     }
@@ -500,6 +509,7 @@ button {
         right: 10px;
         width: 50px;
         height: 50px;
+        z-index: 20;
     }
 
     .cross {
