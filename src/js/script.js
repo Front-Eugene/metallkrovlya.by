@@ -142,7 +142,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // АКТИВНЫЙ ДОБОРНЫЙ МАТЕРИАЛ
 
-    const labels = document.querySelectorAll('.dop-material-items label');
+    const labels = document.querySelectorAll('.dop-label label');
     const images = document.querySelectorAll('.dop-material-img');
 
     labels.forEach((label, index) => {
@@ -161,6 +161,16 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // АКТИВНЫЙ ДОБОРНЫЙ МАТЕРИАЛ
 
+    const myLabels = document.querySelectorAll('.dop-label label');
+
+    myLabels.forEach((label) => {
+      label.addEventListener('click', () => {
+        myLabels.forEach((lbl) => {
+          lbl.classList.remove('active');
+        });
+        label.classList.add('active');
+      });
+    });
 })
 
 

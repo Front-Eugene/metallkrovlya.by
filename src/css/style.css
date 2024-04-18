@@ -562,31 +562,43 @@ button {
         height: 500px;
         position: relative;
         display: flex;
+        justify-content: space-around;
         background: #fff;
     }
 
     .dop-material-items {
+        position: absolute;
+        z-index: 20;
         width: 50%;
         display: flex;
         flex-direction: column;
     }
 
-    .dop-material-items label {
-        height: 35px;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 10px;
-        font-size: 25px;
-        cursor: pointer;
+    .dop-label {
+        position: absolute;
+        padding: 10px 0;
+        width: 50%;
         display: flex;
-        align-items: center;
+        justify-content: space-around;
     }
 
-    .dop-material-items label:hover {
-        padding: 10px 20px;
-        background: #8f8f8f;
-        color: #fff;
+    .dop-label  label{
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background: #000;
+        z-index: 20;
+        cursor: pointer;
     }
+    .active{
+        width: 60px !important;
+        background: #444 !important;
+    }
+
+    /* .dop-label label:hover {
+        width: 60px;
+        background: #444;
+    } */
 
     .dop-material-img {
         min-width: 100%;
@@ -607,9 +619,10 @@ button {
     }
 
     .material-img-wrap {
-        width: 50%;
+        width: 100%;
         position: relative;
         overflow: hidden;
+        display: flex;
         /* display: flex;
         align-items: center;
         justify-content: space-around; */
@@ -825,3 +838,54 @@ button {
     }
 
 /* FOOTER */
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+    .popular-wrap {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .catalog {
+        height: auto;
+    }
+
+    .perks-wrap {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .dop-label {
+        width: 90%;
+    }
+
+    .more {
+        position: sticky;
+        width: 95%;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .perks-wrap-item {
+        width: 100%;
+    }
+
+    .perks-description {
+        width: 100%;
+    }
+
+    .contact-item-wrap {
+        width: 100%;
+    }
+
+    .contact {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .map-wrap {
+        width: 100%;
+        height: 350px;
+    }
+}
