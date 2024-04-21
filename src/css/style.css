@@ -586,13 +586,21 @@ button {
         width: 30px;
         height: 30px;
         border-radius: 15px;
-        background: #000;
         z-index: 20;
+
+        background: #5e5e5e;
+        box-shadow: 3px 3px 5px #000000;
         cursor: pointer;
+        opacity: .7;
+        transition: .5s;
     }
     .active{
-        width: 60px !important;
-        background: #444 !important;
+        opacity: 1 !important;
+        width: 70px !important;
+        background: #5e5e5e !important;
+        box-shadow: 3px 3px 5px #000000;
+        /* width: 60px !important;
+        background: #444 !important; */
     }
 
     /* .dop-label label:hover {
@@ -839,7 +847,43 @@ button {
 
 /* FOOTER */
 
-@media screen and (min-width: 320px) and (max-width: 1200px) {
+@media screen and (min-width: 100px) and (max-width: 1200px) {
+
+    header .logo {
+        width: 150px;
+    }
+
+    .contact-wrap {
+        width: auto;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        min-width: 100vw;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background: #fff;
+        display: none;
+    }
+
+    .nav-mobile ul {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .show {
+        display: block;
+    }
+
     .popular-wrap {
         flex-wrap: wrap;
         justify-content: space-around;
@@ -860,11 +904,35 @@ button {
     }
 
     .more {
-        position: sticky;
-        width: 95%;
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+        z-index: 999;
+        margin: 0 auto;
         top: 0;
         left: 0;
         transform: translateX(0);
+    }
+
+    .more .price {
+        margin: 10px 0;
+    }
+
+    .more .slider-wrap {
+        height: 150px;
+    }
+
+    .more .slider-item {
+        margin: 10px 0 10px 20px;
+    }
+
+    .more .description ul {
+        margin: 10px 0 10px 20px;
+    }
+
+    .more .popular-img { 
+        display: none;
     }
 
     .perks-wrap-item {
@@ -875,8 +943,63 @@ button {
         width: 100%;
     }
 
+    .dop-label label {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+    }
+
+    .box-item-img {
+        height: 100px;
+    }
+
+    .gallery {
+        height: 350px;
+    }
+
+    .box-item {
+        font-size: 15px;
+    }
+
+    .gallery-controls {
+        margin: -180px 0 0 0;
+    }
+    
+    .gallery h2, .gallery h3 {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .box-item h3 {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    .active {
+        width: 40px !important;
+    }
+
+    form h2 {
+        font-size: 20px;
+    }
+
+    .form-item-wrap {
+        width: 100%;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .form-input {
+        margin: 10px 0 0 0;
+    }
+
     .contact-item-wrap {
         width: 100%;
+    }
+
+    form p {
+        font-size: 14px;
+        margin-bottom: 25px;
     }
 
     .contact {
@@ -887,5 +1010,21 @@ button {
     .map-wrap {
         width: 100%;
         height: 350px;
+    }
+
+    footer {
+        text-align: center;
+        margin: 0 auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .footer-item {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    footer a {
+        font-size: 16px;
     }
 }
