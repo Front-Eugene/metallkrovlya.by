@@ -26,6 +26,10 @@ button {
     cursor: pointer;
 }
 
+.nav-mobile {
+    display: none;
+}
+
 /* HEADER */
 
     header {
